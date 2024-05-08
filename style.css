@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    padding: 3rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.progress-bar-container{
+    width: 80vw;
+    height: 10px;
+    border: 1px solid goldenrod;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.progress-bar{
+    width: 0;
+    height: 100%;
+    background-color: goldenrod;
+}
+
+.progress-bar-container:hover .progress-bar{
+    width: 100%;
+    transition: all 0.9s;
+}
+
+.tooltip-container{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+ul li{
+    list-style: none;
+    padding: 1rem 1.6rem;
+    background: gray;
+    border-radius: .3rem;
+    position: relative;
+}
+
+
+
+ul li:nth-child(1) a{
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    border-radius: 1rem;
+}
+
+ul li:nth-child(1):hover a{
+    display: block;
+}
+
+
+ul li:nth-child(2) a{
+    padding: 1rem 2rem;
+    position: absolute;
+    left: -8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    border-radius: 1rem;
+}
+
+ul li:nth-child(2):hover a{
+    display: block;
+}
+
+
+
+ul li:nth-child(3) a{
+    padding: 1rem 2rem;
+    position: absolute;
+    right: -9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    border-radius: 1rem;
+}
+
+ul li:nth-child(3):hover a{
+    display: block;
+}
+
+
+ul li:nth-child(4) a{
+    padding: 1rem 2rem;
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    border-radius: 1rem;
+}
+
+ul li:nth-child(4):hover a{
+    display: block;
+}
+
+ul li a{
+    text-decoration: none;
+    position: relative;
+    background: gainsboro;
+    color: black;
+    z-index: 99;
+}
+
+ul li a::after{
+    content: "";
+    width: 1.6rem;
+    height: 1.6rem;
+    background: gainsboro;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+ul li:nth-child(1) a::after{
+    top: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    rotate:45deg;
+}
+
+ul li:nth-child(2) a::after{
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    rotate:45deg;
+}
+
+ul li:nth-child(3) a::after{
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    rotate:45deg;
+}
+
+ul li:nth-child(4) a::after{
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
+    rotate:45deg;
+}
